@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  available: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   background: #f0f0f5;
   border-radius: 8px;
 
@@ -9,6 +13,7 @@ export const Container = styled.div`
     border-radius: 8px 8px 0px 0px;
     height: 192px;
     overflow: hidden;
+    max-width: 405.33px;
     transition: 0.3s opacity;
     text-align: center;
 
